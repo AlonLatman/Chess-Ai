@@ -1,0 +1,9 @@
+# Chess-Ai
+Chess Ai chess game using Minimax Algorithm,
+This Python code is a chess game that allows two artificial intelligences (AIs) to play against each other. The code reads from a file called "test.txt," which contains a list of FEN (Forsyth-Edwards Notation) strings representing different starting positions on the chessboard. The AIs use the minimax algorithm to evaluate potential moves and choose the best one.
+The code defines several functions, including:
+evaluate_board(board): This function evaluates the current state of the board and returns a score based on the material value of the pieces and the number of pieces that each player has.
+minimax(board, depth, alpha, beta, maximizing_player): This function uses the minimax algorithm to recursively evaluate potential moves and choose the best one. It takes the current board state, the search depth, and alpha-beta pruning parameters as inputs and returns the best score and move.
+find_best_move(board, depth): This function uses the minimax() function to find the best move for the current player. It takes the current board state and the search depth as inputs and returns the best score and move.
+play_chess(fen, black_count, white_count): This function is the main game loop. It takes the starting FEN string, the number of moves made by the black AI, and the number of moves made by the white AI as inputs. It uses the black_ai() and white_ai() functions to get moves from the AIs, updates the board state, and checks for checkmate or a draw.
+The code also defines a dictionary called piece_value, which assigns a material value to each type of chess piece. Finally, the code reads the FEN strings from the "test.txt" file, initializes the black and white move counts to 0, and iterates through each FEN string, calling the play_chess() function for each one. After each game, the code prints the number of moves made by each AI.
